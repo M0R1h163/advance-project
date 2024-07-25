@@ -1,0 +1,31 @@
+.done_area {
+    width: 40%;
+    height: 300px;
+    background-color: white;
+    margin: 10% auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    box-shadow: 3px 3px 5px gray;
+}
+
+.done_inner {
+    height: 300px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 150%;
+    margin-top: 20%;
+}
+
+.button_done {
+    width: 30%;
+    font-size: 100%;
+    margin-top: 20%;
+    color: white;
+    background-color: rgb(0, 76, 255);
+    border: 5px solid rgb(0, 76, 255);
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+/* メニュー部分の共通表記 */
+
+.top_header{
+    width:20%;
+
+}
+
+.icon{
+    margin-top: 20%;
+    margin-left: 60%;
+    
+
+}
+
+.x_line{
+    background-color: rgb(0, 76, 255);
+    padding:5px 10px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family:none;
+    text-decoration: none;
+    border-radius: 5% 5%;
+    box-shadow: 3px 3px 5px gray;
+
+}

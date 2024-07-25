@@ -1,0 +1,39 @@
+/* メニュー共通部分 */
+
+.HomeMenu{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.HomeMenu_inner{
+    text-align: center;
+}
+
+.Home{
+    text-decoration: none;
+    color:rgb(0, 76, 255);
+}
+
+/* ログアウト・マイページ用 */
+.Logout{
+    text-decoration: none;
+    color:rgb(0, 76, 255);
+}
+
+.Mypage{
+    text-decoration: none;
+    color: rgb(0, 76, 255);
+}
+
+/* ログイン・会員登録 */
+.Registration{
+    text-decoration: none;
+        color: rgb(0, 76, 255);
+}
+
+.Login{
+    text-decoration: none;
+        color: rgb(0, 76, 255);
+}
+

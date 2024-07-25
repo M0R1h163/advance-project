@@ -1,0 +1,110 @@
+/*******************************< 共通部分 >*******************************/
+
+/* タイトルトップ部分 */
+.form{
+    width: 27%;
+    margin:10% auto;
+}
+
+.top_form {
+    color: white;
+    padding: 10px 0px 10px 0px;
+    border-radius: 3% 3% 0% 0%;
+    box-shadow: 3px 3px 5px gray;
+}
+
+b {
+    margin-left: 5%;
+}
+
+/* 入力項目グループ */
+.contents_item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* 入力項目（幅・間隔） */
+.adjust {
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* アイコンイメージ */
+.material-icons.image {
+    font-size: 210%;
+    color: rgb(72, 70, 70);
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+/* 入力部分 */
+.txt {
+    width: 70%;
+    border: none;
+    border-bottom: solid 1px darkslategray;
+    color: rgb(72, 70, 70);
+}
+
+/*******************************< login部分 >*******************************/
+
+/** 外枠 login **/
+.login_form{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(0, 76, 255);
+    box-shadow: 3px 5px 5px gray;
+}
+
+/* 内枠 login  **/
+.login_inner_form{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 0% 0% 5px 5px;
+    box-shadow: 3px 5px 5px gray;
+}
+
+/* ログインボタン */
+.button_login{
+        width: 23%;
+        padding: 0px;
+        font-size: 30%;
+        margin-left: 65%;
+        color: white;
+        background-color: rgb(0, 76, 255);
+        border: 5px solid rgb(0, 76, 255);
+        border-radius: 5px;
+}
+
+/*******************************< Registration部分 >*******************************/
+
+/** 外枠 registration **/
+.registration_form {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(0, 76, 255);
+    box-shadow: 3px 5px 5px gray;
+}
+
+/* 内枠 registration **/
+.registration_inner_form {
+    width: 100%;
+    height: 210px;
+    background-color: white;
+    border-radius: 0% 0% 5px 5px;
+    box-shadow: 3px 5px 5px gray;
+}
+
+/* 登録ボタン */
+.button_registration{
+    width: 15%;
+    padding: 0%;
+    font-size: 30%;
+    margin-top: 3% 3% 75% 0%;
+    margin-left: 75%;
+    color: white;
+    background-color: rgb(0, 76, 255);
+    border: 5px solid rgb(0, 76, 255);
+    border-radius: 5px;
+}
