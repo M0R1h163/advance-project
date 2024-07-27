@@ -4,7 +4,7 @@
 
 .header_form{
     width: 100%;
-    height: 40px;
+    height: 45px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,15 +15,16 @@
 
 .select{
     width: 15%;
-    height:40px;
+    height:60%;
     border: none;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 0px 0px 5px;
+    border-right: 1px solid lightgrey;
     text-align: center;
 }
 
 .select_tag{
     font-weight: bold;
-
+    color: lightgray;
 }
 
 .search_icon{
@@ -73,12 +74,16 @@
 
 } */
 /* 店名 */
-.card__content-ttl{
+.card__content-shop{
     font-size: 20px;
     font-weight: 800;
     margin-left: 5%;
 }
 /* 地域・ジャンル */
+.card__content-areaGenre{
+    display: flex;
+}
+
 .card__content-p{
     margin-top: -5%;
     font-size: 15px;

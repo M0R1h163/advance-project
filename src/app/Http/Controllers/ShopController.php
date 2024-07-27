@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Shop;
+use App\Models\Area;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
     public function index(){
-        $shops = Shop::all();
-        $hasAreas = Shop::has('area')->get();
-        $hasGenres = Shop::has('genre')->get();
-        $param = ['shops' => $shops ,'hasAreas' => $hasAreas , 'hasGenres' => $hasGenres];
+        $shops = Shop::with(['area', 'genre'])->get();
+        $areas = Area::all();
+        $genres = Genre::all();
+        $param = ['shops' => $shops ,'areas' => $areas , 'genres' => $genres];
         return view('index',$param);
     }
 }

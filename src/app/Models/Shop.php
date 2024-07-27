@@ -11,17 +11,21 @@ class Shop extends Model
 
     // protected $fillable = ['area_id','genre_id'];
     
-    //shop_all画面(エリア・ジャンル)表示用
-    public function getTitle(){
-        return '#'.optional($this->area)->name.' '.'#'.optional($this->genre)->name;
+    //shop_all画面(エリア・ジャンル)表示用メソッド
+    public function getArea(){
+        return optional($this->area)->name;
+    }
+
+    public function getGenre(){
+        return optional($this->genre)->name;
     }
 
     //リレーション
     public function area(){
-        return $this->belongsTo('App\Models\Area');
+        return $this->belongsTo(Area::class);
     }
 
     public function genre(){
-        return $this->belongsTo('App\Models\Genre');
+        return $this->belongsTo(Genre::class);
     }
 }
