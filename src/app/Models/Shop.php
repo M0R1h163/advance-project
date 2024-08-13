@@ -9,7 +9,7 @@ class Shop extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['area_id','genre_id'];
+    protected $fillable = ['area_id','genre_id'];
     
     //shop_all画面(エリア・ジャンル)表示用メソッド
     public function getArea(){
@@ -27,5 +27,9 @@ class Shop extends Model
 
     public function genre(){
         return $this->belongsTo(Genre::class);
+    }
+    
+    public function favorite(){
+        return $this->hasMany(Favorite::class);
     }
 }

@@ -44,19 +44,30 @@
         </h2>
         <div class="card__content-areaGenre">
             <p class="card__content-p">
-                #{{ $shop->getArea() }}
+                #{{ $shop->getAreaName() }}
             </p>
             <p class="card__content-p">
-                #{{ $shop->genre->name }}
+                #{{ $shop->getGenreName() }}
             </p>
         </div>
         <div class="card__content-cat">
             <button class="detail_btn">
                 <label class="card_detail" for="">詳しくみる</label>
             </button>
-            <button class="favorite_btn">
-                <label class="material-icons image" for="">favorite</label>
-            </button>
+            <!-- お気に入りボタン -->
+            <form action="/favorite" method="POST" class="">
+                @forelse ($favorites as $favorite)
+                 @csrf
+                <button type="submit" class="favorite_btn" id="{{ $favorite->id }}" name="status" value="1">
+                    <label class="material-icons image_red" for="{{ $favorite->id }}">favorite</label>
+                </button>
+                @empty
+                <!-- 空の時の処理内容を記載 -->
+                 <button type="submit" class="favorite_btn" id="" name="status" value="0" >
+                    <label class="material-icons image_gray" for="">favorite</label>
+                </button>
+                @endforelse
+            </form>
         </div>
     </div>
 </div>

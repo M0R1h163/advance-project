@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\FavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/loginMenu',[AuthController::class,'loginMenu']);
 
 
 Route::get('/', [ShopController::class,'index']);
+Route::post('/favorite',[ShopController::class,'favoriteBtn']);
+
 Route::get('/login',[AuthController::class,'login']);
 Route::get('/mypage',[AuthController::class,'mypage']);
 Route::get('/logout',[AuthController::class,'logout']);

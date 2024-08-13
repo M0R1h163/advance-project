@@ -114,10 +114,18 @@
 /* ボタン(お気に入り) */
 .favorite_btn{
     border: none;
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.material-icons.image{
+.material-icons.image_red{
     font-size: 230%;
     color: red;
+    background-color: rgba(0,0,0,0);
+}
+
+.material-icons.image_gray {
+    font-size: 230%;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0% solid none;
 }

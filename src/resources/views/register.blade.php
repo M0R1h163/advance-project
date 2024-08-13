@@ -31,7 +31,7 @@
                             <label class="material-icons image" for="txtPassWord" >lock</label>
                             <input class="txt" type="text" id="txtPassWord" placeholder="PassWord">
                         </div>
-                        <button class="button_registration">登録</button>
+                        <button type="submit" class="button_registration">登録</button>
                     </div>
                 </div>
         </form>
