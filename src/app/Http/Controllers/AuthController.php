@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function login(){
-        return view('login');
+        return view('auth.login');
     }
 
 
@@ -21,11 +21,17 @@ class AuthController extends Controller
     }
 
     public function register(){
-        return view('register');
+        return view('auth.register');
     }
 
+    // public function store(Request $request){
+    //     $form = $request->all();
+    //     User::create();
+    //     return redirect('/');
+    // }
+
     public function thanks(){
-        return view('thanks');
+        return view('auth.thanks');
     }
 
     public function detail(){
