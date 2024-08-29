@@ -11,23 +11,31 @@
 <body>
     <div class="header">
         <div class="header_inner">
+            @if (Auth::check())
             <div class="heder_common">
-                <a class=icon href="/">
+                <a class=icon href="/homeMenu">
                     <div class="middle_line"></div>
                     <div class="long_line"></div>
                     <div class="short_line"></div>
                 </a>
-                <a class="icon_ttl" href="/">Rese</a>
+                <a class="icon_ttl" href="/homeMenu">Rese</a>
+            @else
+            <div class="heder_common">
+                <a class=icon href="/loginMenu">
+                    <div class="middle_line"></div>
+                    <div class="long_line"></div>
+                    <div class="short_line"></div>
+                </a>
+                <a class="icon_ttl" href="/loginMenu">Rese</a>
+            @endif
             </div>
             <div class="heder_search">
             @yield('appSearch')
             </div>
         </div>
     </div>
-
     <div class="main">
         @yield('appMain')
     </div>
-
 </body>
 </html>

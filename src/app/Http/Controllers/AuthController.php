@@ -13,7 +13,7 @@ class AuthController extends Controller
 
 
     public function logout(){
-        return view('index');
+        return view('auth.login');
     }
 
     public function done(){

@@ -10,8 +10,10 @@
 
 <!-- HEADER部分 -->
 @section('appSearch')
+@if (Auth::check())
 <div class="header_search">
-    <form action="/" method="get" class="header_form">
+    <form action="/" method="GET" class="header_form">
+        @csrf
         <select name="" id="" class="select">
             <option value='' selected="selected" disabled>All area</option>
             @foreach($areas as $area)
@@ -27,12 +29,15 @@
         <label class="material-icons image search" for="search">search</label>
             <input class="search_box" type="search" id="search" placeholder="Search...">
     </form>
+@endif
 </div>
+
 @endsection
 
 <!-- BODY部分 -->
 @section('appMain')
 <div class="shop_main">
+@if (Auth::check())
 @foreach ($shops as $shop)
 <div class="card">
     <div class="card__img">
@@ -72,5 +77,5 @@
     </div>
 </div>
 @endforeach
-</div>
+@endif
 @endsection

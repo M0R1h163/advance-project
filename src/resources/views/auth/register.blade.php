@@ -12,7 +12,7 @@
 
 <div class="main">
     <div class="form">
-        <form action="/register" method="POST" class="registration_form">
+        <form action="/register" method="post" class="registration_form">
             @csrf
             <div class="top_form"><b>Registration</b></div>
                 <div class="registration_inner_form">
@@ -30,7 +30,7 @@
                         <!-- パスワード入力欄 -->
                         <div class="adjust">
                             <label for="txtPassWord" class="material-icons image">lock</label>
-                            <input class="txt" type="password" name="password" value="{{ old('password') }}" id="txtPassWord" placeholder="PassWord"/>
+                            <input class="txt" type="password" name="password"  id="txtPassWord" placeholder="PassWord"/>
                         </div>
                         <button type="submit" class="button_registration">登録</button>
                     </div>

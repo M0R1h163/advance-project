@@ -16,10 +16,8 @@
         </div>
     </header>
     </div>
-
     <main class="main">
         @yield('menuMain')
     </main>
-
 </body>
 </html>

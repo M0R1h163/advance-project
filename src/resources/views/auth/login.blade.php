@@ -10,7 +10,6 @@
 @endsection
 
 @section('appMain')
-
     <div class="form">
         <form action="/login" method="POST" class="login_form">
             @csrf
@@ -20,18 +19,17 @@
                         <!-- メールアドレス入力欄 -->
                         <div class="adjust">
                             <label class="material-icons image" for="txtEmail">email</label>
-                            <input class="txt" type="email" value="{{ old('email') }}" id="txtEmail" placeholder="Email"/>
+                            <input class="txt" type="email" name="email" value="{{ old('email') }}" id="txtEmail" placeholder="Email"/>
                         </div>
                         <!-- パスワード入力欄 -->
                         <div class="adjust">
                             <label class="material-icons image" for="txtPassWord" >lock</label>
-                            <input class="txt" type="password" value="{{ old('password') }}" id="txtPassWord" placeholder="PassWord"/>
+                            <input class="txt" type="password" name="password" id="txtPassWord" placeholder="PassWord"/>
                         </div>
                     </div>
                     <button class="button_login">ログイン</button>
                 </div>
         </form>
     </div>
-
 @endsection
 

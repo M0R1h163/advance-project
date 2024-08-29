@@ -21,6 +21,18 @@
     color:rgb(0, 76, 255);
 }
 
+.button-link {
+    background: none;
+    border: none;
+    color: rgb(0, 76, 255);;
+    /* 文字色を設定 */
+    text-decoration: none;
+    /* 文字サイズを調整 */
+    font-size: 100%;
+    font-weight: bold;
+}
+
+
 .Mypage{
     text-decoration: none;
     color: rgb(0, 76, 255);

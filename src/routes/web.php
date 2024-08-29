@@ -16,24 +16,41 @@ use App\Http\Controllers\FavoriteController;
 |
 */
 
+
+/* ログイン後 */
+Route::middleware('auth')->group(function () {
+Route::get('/', [ShopController::class,'index']);
 Route::get('/homeMenu',[AuthController::class,'homeMenu']);
+
+});
+
 Route::get('/loginMenu',[AuthController::class,'loginMenu']);
 
-
-Route::get('/', [ShopController::class,'index']);
-Route::post('/favorite',[ShopController::class,'favoriteBtn']);
-
-Route::get('/login',[AuthController::class,'login']);
-Route::get('/mypage',[AuthController::class,'mypage']);
-Route::get('/logout',[AuthController::class,'logout']);
+// Route::get('/register',[AuthController::class,'register']);
+// Route::post('/register',[AuthController::class,'register']);
 
 
-Route::get('/register',[AuthController::class,'register']);
-Route::get('/done',[AuthController::class,'done']);
 
-Route::get('/thanks',[AuthController::class,'thanks']);
 
-Route::get('/detail',[AuthController::class,'detail']);
+
+// Route::get('/thanks',[AuthController::class,'thanks']);
+// Route::get('/', [ShopController::class,'index']);
+
+
+
+
+
+
+// Route::post('/favorite',[ShopController::class,'favoriteBtn']);
+// Route::get('/mypage',[AuthController::class,'mypage']);
+
+
+
+// Route::get('/done',[AuthController::class,'done']);
+
+
+
+// Route::get('/detail',[AuthController::class,'detail']);
 
 
 
