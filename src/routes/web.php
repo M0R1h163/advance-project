@@ -17,17 +17,23 @@ use App\Http\Controllers\FavoriteController;
 */
 
 
+// ログインメニュー
+Route::get('/loginMenu',[AuthController::class,'loginMenu']);
+// 会員登録thanksメニュー
+Route::get('/thanks', [AuthController::class, 'thanks'])->name('thanks');
+//戻るボタン(X)
+Route::get('/back',[AuthController::class,'back']);
+
 /* ログイン後 */
 Route::middleware('auth')->group(function () {
-Route::get('/', [ShopController::class,'index']);
-Route::get('/homeMenu',[AuthController::class,'homeMenu']);
-
+    Route::get('/', [ShopController::class,'index']);
+    Route::get('/homeMenu',[AuthController::class,'homeMenu']);
 });
 
-Route::get('/loginMenu',[AuthController::class,'loginMenu']);
 
-// Route::get('/register',[AuthController::class,'register']);
-// Route::post('/register',[AuthController::class,'register']);
+
+
+
 
 
 

@@ -10,7 +10,7 @@ class Shop extends Model
     use HasFactory;
 
     protected $fillable = ['area_id','genre_id'];
-    
+
     //shop_all画面(エリア・ジャンル)表示用メソッド
     public function getAreaName(){
         return optional($this->area)->name;

@@ -17,13 +17,13 @@
         <select name="" id="" class="select">
             <option value='' selected="selected" disabled>All area</option>
             @foreach($areas as $area)
-            <option class="select_tag" value="">{{ $area->name }}</option>
+            <option class="select_tag" value="{{ $area->id }}">{{ $area->name }}</option>
             @endforeach
         </select>
         <select name="" id="" class="select">
             <option value='' selected="selected" disabled>All genre</option>
             @foreach($genres as $genre)
-            <option class="select_tag" value="" placeholder="All genre">{{ $genre->name }}</option>
+            <option class="select_tag" value="{{ $genre->id }}" placeholder="All genre">{{ $genre->name }}</option>
             @endforeach
         </select>
         <label class="material-icons image search" for="search">search</label>

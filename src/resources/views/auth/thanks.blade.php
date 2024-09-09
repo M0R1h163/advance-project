@@ -11,7 +11,7 @@
     <div class="form_area" >
         <div class="form_inner">
             <h1>会員登録ありがとうございます</h1>
-            <form action="" >
+            <form action="/login" method="GET">
                 <button class="button_thanks">ログインする</button>
             </form>
         </div>
