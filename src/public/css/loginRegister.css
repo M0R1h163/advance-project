@@ -59,10 +59,11 @@ b {
 /* 内枠 login  **/
 .login_inner_form{
     width: 100%;
-    height: 150px;
+    height: 180px;
     background-color: white;
     border-radius: 0% 0% 5px 5px;
     box-shadow: 3px 5px 5px gray;
+
 }
 
 /* ログインボタン */
@@ -90,7 +91,7 @@ b {
 /* 内枠 registration **/
 .registration_inner_form {
     width: 100%;
-    height: 210px;
+    height: 230px;
     background-color: white;
     border-radius: 0% 0% 5px 5px;
     box-shadow: 3px 5px 5px gray;
@@ -107,4 +108,22 @@ b {
     background-color: rgb(0, 76, 255);
     border: 5px solid rgb(0, 76, 255);
     border-radius: 5px;
+}
+
+/*******************************< validation部分 >*******************************/
+
+.validation_login{
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: -10px;
+    padding-bottom: -10px;
+    color: red;
+}
+
+.validation_register {
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    padding-bottom: -15px;
+    color: red;
 }

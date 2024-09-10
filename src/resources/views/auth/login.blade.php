@@ -17,11 +17,17 @@
                 <div class="login_inner_form">
                     <div class="contents_item">
                         <!-- メールアドレス入力欄 -->
+                        @error('email')
+                            <div class="validation_login">{{ $message }}</div>
+                        @enderror
                         <div class="adjust">
                             <label class="material-icons image" for="txtEmail">email</label>
                             <input class="txt" type="email" name="email" value="{{ old('email') }}" id="txtEmail" placeholder="Email"/>
                         </div>
                         <!-- パスワード入力欄 -->
+                        @error('password')
+                            <div class="validation_login">{{ $message }}</div>
+                        @enderror
                         <div class="adjust">
                             <label class="material-icons image" for="txtPassWord" >lock</label>
                             <input class="txt" type="password" name="password" id="txtPassWord" placeholder="PassWord"/>

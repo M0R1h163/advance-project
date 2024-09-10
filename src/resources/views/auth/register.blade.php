@@ -18,16 +18,25 @@
                 <div class="registration_inner_form">
                     <div class="contents_item">
                         <!-- ユーザー入力欄 -->
+                        @error('name')
+                            <div class="validation_register">{{ $message }}</div>
+                        @enderror
                         <div class="adjust">
                             <label class="material-icons image" for="txtUsername">person_4</label>
                             <input class="txt" type="text" name="name" value="{{ old('name') }}" id="txtUsername"  placeholder="UserName"/>
                         </div>
                         <!-- メールアドレス入力欄 -->
+                        @error('email')
+                            <div class="validation_register">{{ $message }}</div>
+                        @enderror
                         <div class="adjust">
                             <label class="material-icons image" for="txtEmail">email</label>
                             <input class="txt" type="email" name="email" value="{{ old('email') }}" id="txtEmail" placeholder="Email"/>
                         </div>
                         <!-- パスワード入力欄 -->
+                        @error('password')
+                            <div class="validation_register">{{ $message }}</div>
+                        @enderror
                         <div class="adjust">
                             <label for="txtPassWord" class="material-icons image">lock</label>
                             <input class="txt" type="password" name="password" id="txtPassWord" placeholder="PassWord"/>
