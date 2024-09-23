@@ -60,18 +60,28 @@
                 <label class="card_detail" for="">詳しくみる</label>
             </button>
             <!-- お気に入りボタン -->
-            <form action="/favorite" method="POST" class="">
-                @forelse ($favorites as $favorite)
-                 @csrf
-                <button type="submit" class="favorite_btn" id="{{ $favorite->id }}" name="status" value="1">
-                    <label class="material-icons image_red" for="{{ $favorite->id }}">favorite</label>
+            <form action="/favorite/{{ $shop->id }}" method="POST">
+            @csrf
+                @php
+                    $favorite = Auth::user()->favorite()->where('shop_id',$shop->id)->first()
+                @endphp
+            @if (!$favorite)
+                <!-- お気に入り登録が存在しないとき -->
+                <button type="submit" class="favorite_btn" id="favoriteBtn" name="status" value="1" >
+                    <label class="material-icons image_gray" for="favoriteBtn">favorite</label>
                 </button>
-                @empty
-                <!-- 空の時の処理内容を記載 -->
-                 <button type="submit" class="favorite_btn" id="" name="status" value="0" >
-                    <label class="material-icons image_gray" for="">favorite</label>
+            @else
+            <!-- お気に入り登録が存在 -->
+                @if ($favorite->status == 1)
+                <button type="submit" class="favorite_btn" id="favoriteBtn" name="status">
+                    <label class="material-icons image_red" for="favoriteBtn">favorite</label>
                 </button>
-                @endforelse
+                @else
+                <button type="submit" class="favorite_btn" id="favoriteBtn" name="status">
+                    <label class="material-icons image_gray" for="favoriteBtn">favorite</label>
+                </button>
+                @endif
+            @endif
             </form>
         </div>
     </div>

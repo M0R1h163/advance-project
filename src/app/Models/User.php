@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -41,4 +42,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     *favoriteモデルのリレーション
+     */
+    public function favorite(){
+        return $this->hasMany(Favorite::class);
+    }
+    //各ユーザーのお気に入り情報(リレーション)
+    public function favoriteShops(){
+        return $this->belongsToMany(Shop::class, 'favorites')
+                    ->withPivot('status')
+                    ->withTimestamps();
+    }
 }

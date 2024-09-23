@@ -28,6 +28,9 @@ Route::get('/back',[AuthController::class,'back']);
 Route::middleware('auth')->group(function () {
     Route::get('/', [ShopController::class,'index']);
     Route::get('/homeMenu',[AuthController::class,'homeMenu']);
+    // //戻るボタン(X)
+    // Route::get('/back',[AuthController::class,'back']);
+    Route::post('/favorite/{shop}',[FavoriteController::class,'favoriteBtn']);
 });
 
 

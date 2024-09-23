@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function loginMenu(){
+        // $prevurl = url()->previous();
+        // return view('login_menu',$prevurl);
         return view('login_menu');
     }
 
@@ -18,8 +20,9 @@ class AuthController extends Controller
         return view('home_menu');
     }
 
-        public function back(){
-        return  redirect()->back();
+    public function back(){
+        // $prevurl = url()->previous();
+        return back();
     }
 
 

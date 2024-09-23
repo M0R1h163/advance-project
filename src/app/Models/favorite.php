@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class favorite extends Model
+class Favorite extends Model
 {
     use HasFactory;
 
