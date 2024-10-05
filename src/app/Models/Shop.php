@@ -33,4 +33,31 @@ class Shop extends Model
         return $this->hasMany(Favorite::class);
     }
 
+    //検索用リレーション
+    public function scopeAreaSearch($query, $area_id)
+    {
+        if (!empty($area_id)) {
+        $query->where('area_id', $area_id);
+        }
+    }
+
+    public function scopeGenreSearch($query, $genre_id)
+    {
+        if (!empty($genre_id)) {
+        $query->where('genre_id', $genre_id);
+        }
+    }
+
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if (!empty($keyword)) {
+        $query->where('name', 'like', '%' . $keyword . '%')
+                ->orWhereHas('area', function ($subQuery) use ($keyword){
+                    $subQuery->where('name', 'LIKE', '%' . $keyword . '%');
+                })
+                ->orWhereHas('genre', function ($subQuery) use ($keyword){
+                    $subQuery->where('name', 'like', '%' . $keyword . '%');
+                });
+        }
+    }
 }

@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/homeMenu',[AuthController::class,'homeMenu']);
     // //戻るボタン(X)
     // Route::get('/back',[AuthController::class,'back']);
+    Route::get('/search',[ShopController::class,'search']);
     Route::post('/favorite/{shop}',[FavoriteController::class,'favoriteBtn']);
+
 });
 
 

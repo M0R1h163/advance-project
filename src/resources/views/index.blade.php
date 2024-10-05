@@ -12,22 +12,26 @@
 @section('appSearch')
 @if (Auth::check())
 <div class="header_search">
-    <form action="/" method="GET" class="header_form">
-        @csrf
-        <select name="" id="" class="select">
-            <option value='' selected="selected" disabled>All area</option>
+    <form action="/search" method="GET" class="header_form">
+        <!-- エリア検索欄 -->
+        <select type="submit" name="area" id="search" class="select">
+            <option value="" selected="selected" >All area</option>
             @foreach($areas as $area)
             <option class="select_tag" value="{{ $area->id }}">{{ $area->name }}</option>
             @endforeach
         </select>
-        <select name="" id="" class="select">
-            <option value='' selected="selected" disabled>All genre</option>
+        <!-- ジャンル検索欄 -->
+        <select name="genre" id="search" class="select">
+            <option value="" selected="selected">All genre</option>
             @foreach($genres as $genre)
             <option class="select_tag" value="{{ $genre->id }}" placeholder="All genre">{{ $genre->name }}</option>
             @endforeach
         </select>
-        <label class="material-icons image search" for="search">search</label>
-            <input class="search_box" type="search" id="search" placeholder="Search...">
+        <button type="submit" id="search" class="search_button">
+            <label class="material-icons image search" for="search">search</label>
+        </button>
+        <!-- 入力検索欄 -->
+        <input type="search" name="keyWordSearch" id="search"  class="search_box" placeholder="Search...">
     </form>
 @endif
 </div>
@@ -59,7 +63,7 @@
             <button class="detail_btn">
                 <label class="card_detail" for="">詳しくみる</label>
             </button>
-            <!-- お気に入りボタン -->
+            <!-- お気に入りボタン(関数の引数を渡す)-->
             <form action="/favorite/{{ $shop->id }}" method="POST">
             @csrf
                 @php

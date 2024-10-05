@@ -16,7 +16,8 @@
 .select{
     width: 15%;
     height:60%;
-    border: none;
+    border: none;/* 必要ならボーダーも消す */
+    outline: none;/* カッコやアウトラインを消す */
     border-radius: 5px 0px 0px 5px;
     border-right: 1px solid lightgrey;
     text-align: center;
@@ -35,9 +36,16 @@
 .search_box{
     width: 70%;
     height: 40px;
-    border: none;
+    font-size: 100%;
+    border: none;/* 必要ならボーダーも消す */
+    outline: none;/* カッコやアウトラインを消す */
     border-radius: 5px 5px 5px 5px;
 
+}
+
+.search_button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .material-icons.image.search {
