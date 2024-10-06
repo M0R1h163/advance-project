@@ -13,7 +13,15 @@
 main部分に作成してしまいました。
 
 ## 機能一覧
-
+会員登録
+ログイン
+ログアウト
+飲食店一覧取得
+飲食店お気に入り追加
+飲食店お気に入り削除
+エリアで検索する
+ジャンルで検索する
+店名で検索する
 
 ## 使用技術(実行環境)
 
@@ -22,7 +30,7 @@ main部分に作成してしまいました。
 <img width="1357" alt="スクリーンショット 2024-10-06 21 46 03" src="https://github.com/user-attachments/assets/06c1dde3-5e62-44b9-a6d4-9d0a17a0e76e">
 
 ## ER図
-
+<img width="662" alt="スクリーンショット 2024-10-06 22 05 33" src="https://github.com/user-attachments/assets/d49813dd-50a1-4e68-bfb3-84288d1348d6">
 
 # 環境構築
 
