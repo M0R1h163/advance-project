@@ -24,6 +24,9 @@ main部分に作成してしまいました。
 店名で検索する  
 
 ## 使用技術(実行環境)
+Docker version 27.2.0  
+laravel/framework  8.75以上  
+php:7.4.9  
 nginx:1.21.1  
 mysql:8.0.26  
 
@@ -35,6 +38,41 @@ mysql:8.0.26
 <img width="662" alt="スクリーンショット 2024-10-06 22 05 33" src="https://github.com/user-attachments/assets/d49813dd-50a1-4e68-bfb3-84288d1348d6">
 
 # 環境構築
+・githubからlaravelプロジェクトをclone  
+$ cd coachtech/laravel  
+$ git clone [git@github.com:coachtech-material/laravel-docker-template.git](https://github.com/M0R1h163/advance-project.git)  
+$ mv laravel-docker-template advance-project  
 
+・変更先のリポジトリの作成が終わったら、ローカルリポジトリから紐付け先を変更  
+$ cd advance-project  
+$ git remote set-url origin 作成したリポジトリのurl  
+$ git remote -v  
+
+$ git add .  
+$ git commit -m "リモートリポジトリの変更"  
+$ git push origin main  
+
+・Laravel のパッケージのインストール  
+$ docker-compose exec php bash  
+$ composer install  
 
 ## 他に記載する事項
+・seederについて  
+今回、UsersTableSeeder、ShopsTableSeeder、GenresTableSeeder、AreasTableSeederの４つのシーダーファイルを作成した。  
+下記の手順でマイグレーションとシーディングを行ってください。  
+
+$ php artisan migrate  
+$ php artisan db:seed
+
+・アカウントについて  
+[UsersTableSeeder]  
+test@test.jp/Taro@test.jp/user@user.co.jpの３つのアカウントを作成  
+パスワードはメールアドレスの＠より前の部分の４文字になります。  
+
+・お店・ジャンル・エリア  
+ダミーデータは以下のような内容で作成しています。  
+[ShopsTableSeeder] 20店舗  
+[GenresTableSeeder] ５ジャンル  
+[AreasTableSeeder] ３エリア  
+
+
