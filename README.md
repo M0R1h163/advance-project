@@ -37,6 +37,11 @@ mysql:8.0.26
 ## ER図
 <img width="662" alt="スクリーンショット 2024-10-06 22 05 33" src="https://github.com/user-attachments/assets/d49813dd-50a1-4e68-bfb3-84288d1348d6">
 
+## ルート/コントローラー/モデル/ビュー  
+<img width="1132" alt="スクリーンショット 2024-10-07 23 49 46" src="https://github.com/user-attachments/assets/ed0a6068-eec3-42eb-9f0e-022818ccc093">
+<img width="322" alt="スクリーンショット 2024-10-07 23 51 43" src="https://github.com/user-attachments/assets/e5948506-814a-4f69-a1cd-f696d4995551">
+					
+
 # 環境構築
 ・githubからlaravelプロジェクトをclone  
 $ cd coachtech/laravel  
