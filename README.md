@@ -25,7 +25,7 @@ main部分に作成してしまいました。
 
 ## 使用技術(実行環境)
 Docker version 27.2.0  
-Laravel Framework 8.83.27 
+Laravel Framework 8.83.27  
 php:7.4.9  
 nginx:1.21.1  
 mysql:8.0.26  
